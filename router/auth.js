@@ -11,10 +11,6 @@ const middleware=(req,res,next)=>{
     next();
 }
 
-router.get('/',(req,res)=>{
-    res.send("hello world")
-});
-
 router.get('/about',middleware,(req,res)=>{
     console.log('middleware work')
     res.send("hello about")
